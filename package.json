@@ -1,7 +1,7 @@
 {
   "name": "stringify-author",
   "description": "Stringify an authors object to `name <email> (url)`.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/stringify-author",
   "author": {
     "name": "Jon Schlinkert",
@@ -33,11 +33,11 @@
   },
   "keywords": [
     "author",
+    "authors",
+    "pkg",
+    "package",
     "person",
     "name",
     "url"
-  ],
-  "dependencies": {
-    "lodash": "^2.4.1"
-  }
+  ]
 }

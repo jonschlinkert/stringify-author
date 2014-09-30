@@ -7,15 +7,19 @@
 
 'use strict';
 
-var _ = require('lodash');
-
-var str = '<%= name ? name + " " : "" %><%= email ? "<" + email + "> " : "" %><%= url ? "(" + url + ")" : "" %>';
-
 module.exports = function (author) {
   if (typeof author !== 'object') {
-    throw new Error('[stringify-author] expects and `author` object.');
+    throw new Error('[stringify-author] expects an `author` object.');
   }
 
-  author = _.extend({name: '', email: '', url: ''}, author);
-  return _.template(str, author).replace(/^\s+|\s+$/g, '');
+  var o = {name: ['', ''], email: ['<', '>'], url: ['(', ')']};
+  var str = '';
+
+  for (var key in o) {
+    if (author.hasOwnProperty(key)) {
+      str += o[key][0] + author[key] + o[key][1] + ' ';
+    }
+  }
+
+  return str.trim();
 };
