@@ -1,7 +1,25 @@
 {
   "name": "stringify-author",
-  "version": "0.1.0",
+  "description": "Stringify an authors object to `name <email> (url)`.",
+  "repository": "jonschlinkert/stringify-author",
+  "license": "MIT",
+  "homepage": "https://github.com/jonschlinkert/stringify-author",
+  "authors": [
+    "Jon Schlinkert (https://github.com/jonschlinkert)"
+  ],
   "main": [
     "index.js"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "keywords": [
+    "author",
+    "authors",
+    "name",
+    "package",
+    "person",
+    "pkg",
+    "url"
   ]
 }

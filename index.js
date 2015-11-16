@@ -1,7 +1,7 @@
 /*!
  * stringify-author <https://github.com/jonschlinkert/stringify-author>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
+ * Copyright (c) 2014-2015 Jon Schlinkert.
  * Licensed under the MIT license.
  */
 
@@ -20,6 +20,5 @@ module.exports = function (author) {
       str += o[key][0] + author[key] + o[key][1] + ' ';
     }
   }
-
   return str.trim();
 };

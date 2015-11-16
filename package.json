@@ -3,41 +3,46 @@
   "description": "Stringify an authors object to `name <email> (url)`.",
   "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/stringify-author",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/stringify-author.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/stringify-author",
   "bugs": {
     "url": "https://github.com/jonschlinkert/stringify-author/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jonschlinkert/stringify-author/blob/master/LICENSE-MIT"
-    }
+  "license": "MIT",
+  "files": [
+    "index.js"
   ],
   "main": "index.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "mocha"
   },
   "devDependencies": {
-    "verb": ">= 0.2.6",
-    "mocha": "*"
+    "mocha": "*",
+    "should": "^7.1.1"
   },
   "keywords": [
     "author",
     "authors",
-    "pkg",
-    "package",
-    "person",
     "name",
+    "package",
+    "parse",
+    "stringify",
+    "toString",
+    "person",
+    "pkg",
     "url"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "author-regex",
+        "parse-author",
+        "parse-authors",
+        "stringify-authors"
+      ]
+    }
+  }
 }
