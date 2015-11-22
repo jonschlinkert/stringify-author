@@ -27,6 +27,11 @@ describe('author', function () {
     stringify(author).should.equal('(https://github.com/jonschlinkert)');
   });
 
+  it('should strip trailing slashes from URL:', function () {
+    var author = {url: 'https://github.com/jonschlinkert/'};
+    stringify(author).should.equal('(https://github.com/jonschlinkert)');
+  });
+
   it('should stringify name and url:', function () {
     var author = {name: 'Jon Schlinkert', url: 'https://github.com/jonschlinkert'};
     stringify(author).should.equal('Jon Schlinkert (https://github.com/jonschlinkert)');

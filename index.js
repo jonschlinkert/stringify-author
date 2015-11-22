@@ -9,16 +9,22 @@
 
 module.exports = function (author) {
   if (typeof author !== 'object') {
-    throw new Error('[stringify-author] expects an `author` object.');
+    throw new Error('expected an author to be an object');
   }
 
-  var o = {name: ['', ''], email: ['<', '>'], url: ['(', ')']};
+  var tmpl = {name: ['', ''], email: ['<', '>'], url: ['(', ')']};
   var str = '';
 
-  for (var key in o) {
-    if (author.hasOwnProperty(key)) {
-      str += o[key][0] + author[key] + o[key][1] + ' ';
+  if (author.url) author.url = stripSlash(author.url);
+
+  for (var key in tmpl) {
+    if (author[key]) {
+      str += tmpl[key][0] + author[key] + tmpl[key][1] + ' ';
     }
   }
   return str.trim();
 };
+
+function stripSlash(str) {
+  return str.replace(/\/$/, '');
+}
