@@ -11,15 +11,19 @@
     "index.js"
   ],
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "should": "*"
   },
   "keywords": [
     "author",
     "authors",
     "name",
     "package",
+    "parse",
     "person",
     "pkg",
+    "stringify",
+    "toString",
     "url"
   ]
 }
