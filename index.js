@@ -9,7 +9,7 @@
 
 module.exports = function (author) {
   if (typeof author !== 'object') {
-    throw new Error('expected an author to be an object');
+    throw new TypeError('expected an author to be an object');
   }
 
   var tmpl = {name: ['', ''], email: ['<', '>'], url: ['(', ')']};
