@@ -9,20 +9,18 @@
 
 module.exports = function (author) {
   if (typeof author !== 'object') {
-    throw new Error('expected an author to be an object');
+    throw new TypeError('expected an author to be an object');
   }
-
-  var tmpl = {name: ['', ''], email: ['<', '>'], url: ['(', ')']};
-  var str = '';
 
   if (author.url) author.url = stripSlash(author.url);
 
-  for (var key in tmpl) {
-    if (author[key]) {
-      str += tmpl[key][0] + author[key] + tmpl[key][1] + ' ';
-    }
-  }
-  return str.trim();
+  var name = author.name || "";
+  var url = author.url || author.web;
+  url = url ? (" (" + url.trim() + ")") : "";
+  var email = author.email || author.mail;
+  email = email ? (" <" + email.trim() + ">") : "";
+  return (name.trim() + email + url).trim();
+
 };
 
 function stripSlash(str) {
