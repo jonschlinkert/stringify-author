@@ -69,4 +69,14 @@ describe('author', function () {
       'Jon Schlinkert <jon@sellside.com> (https://github.com/jonschlinkert)'
     );
   });
+
+  it('should stringify old web and mail values', function () {
+    var author = {
+      mail: 'jon.schlinkert@sellside.com',
+      web: 'https://github.com/jonschlinkert'
+    };
+    stringify(author).should.equal(
+      '<jon.schlinkert@sellside.com> (https://github.com/jonschlinkert)'
+    );
+  });
 });
